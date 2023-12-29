@@ -50,160 +50,160 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Add`
+  /// `إضافة`
   String get add {
     return Intl.message(
-      'Add',
+      'إضافة',
       name: 'add',
       desc: '',
       args: [],
     );
   }
 
-  /// `Delete`
+  /// `حذف`
   String get delete {
     return Intl.message(
-      'Delete',
+      'حذف',
       name: 'delete',
       desc: '',
       args: [],
     );
   }
 
-  /// `Edit`
+  /// `تعديل`
   String get edit {
     return Intl.message(
-      'Edit',
+      'تعديل',
       name: 'edit',
       desc: '',
       args: [],
     );
   }
 
-  /// `Filter`
+  /// `تصفية`
   String get query {
     return Intl.message(
-      'Filter',
+      'تصفية',
       name: 'query',
       desc: '',
       args: [],
     );
   }
 
-  /// `Reset`
+  /// `إعادة تعيين`
   String get reset {
     return Intl.message(
-      'Reset',
+      'إعادة تعيين',
       name: 'reset',
       desc: '',
       args: [],
     );
   }
 
-  /// `Save`
+  /// `حفظ`
   String get save {
     return Intl.message(
-      'Save',
+      'حفظ',
       name: 'save',
       desc: '',
       args: [],
     );
   }
 
-  /// `Cancel`
+  /// `إلغاء`
   String get cancel {
     return Intl.message(
-      'Cancel',
+      'إلغاء',
       name: 'cancel',
       desc: '',
       args: [],
     );
   }
 
-  /// `Commit`
+  /// `تنفيذ`
   String get commit {
     return Intl.message(
-      'Commit',
+      'تنفيذ',
       name: 'commit',
       desc: '',
       args: [],
     );
   }
 
-  /// `Close`
+  /// `إغلاق`
   String get close {
     return Intl.message(
-      'Close',
+      'إغلاق',
       name: 'close',
       desc: '',
       args: [],
     );
   }
 
-  /// `Are you sure?`
+  /// `هل أنت متأكد؟`
   String get confirmDelete {
     return Intl.message(
-      'Are you sure?',
+      'هل أنت متأكد؟',
       name: 'confirmDelete',
       desc: '',
       args: [],
     );
   }
 
-  /// `Saved Successfully`
+  /// `تم الحفظ بنجاح`
   String get saved {
     return Intl.message(
-      'Saved Successfully',
+      'تم الحفظ بنجاح',
       name: 'saved',
       desc: '',
       args: [],
     );
   }
 
-  /// `Operating`
+  /// `التشغيل`
   String get operating {
     return Intl.message(
-      'Operating',
+      'التشغيل',
       name: 'operating',
       desc: '',
       args: [],
     );
   }
 
-  /// `Information`
+  /// `معلومات`
   String get information {
     return Intl.message(
-      'Information',
+      'معلومات',
       name: 'information',
       desc: '',
       args: [],
     );
   }
 
-  /// `Confirm`
+  /// `تأكيد`
   String get confirm {
     return Intl.message(
-      'Confirm',
+      'تأكيد',
       name: 'confirm',
       desc: '',
       args: [],
     );
   }
 
-  /// `Gallery`
+  /// `معرض`
   String get gallery {
     return Intl.message(
-      'Gallery',
+      'معرض',
       name: 'gallery',
       desc: '',
       args: [],
     );
   }
 
-  /// `Camera`
+  /// `الكاميرا`
   String get camera {
     return Intl.message(
-      'Camera',
+      'الكاميرا',
       name: 'camera',
       desc: '',
       args: [],
@@ -216,8 +216,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
   List<Locale> get supportedLocales {
     return const <Locale>[
-      Locale.fromSubtags(languageCode: 'en'),
-      Locale.fromSubtags(languageCode: 'zh'),
+      Locale.fromSubtags(languageCode: 'ar'),
     ];
   }
 

@@ -1,0 +1,19 @@
+{
+  "add": "إضافة",
+  "delete": "حذف",
+  "edit": "تعديل",
+  "query": "تصفية",
+  "reset": "إعادة تعيين",
+  "save": "حفظ",
+  "cancel": "إلغاء",
+  "commit": "تنفيذ",
+  "close": "إغلاق",
+
+  "confirmDelete": "هل أنت متأكد؟",
+  "saved": "تم الحفظ بنجاح",
+  "operating": "التشغيل",
+  "information": "معلومات",
+  "confirm": "تأكيد",
+  "gallery": "معرض",
+  "camera": "الكاميرا"
+}
