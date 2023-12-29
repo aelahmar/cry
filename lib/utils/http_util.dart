@@ -17,15 +17,19 @@ class HttpUtil {
   static const String POST = 'post';
   static const String GET = 'get';
 
-  static Future<ResponseBodyApi> get(String url, {data, requestToken = true}) async {
-    return await request(url, data: data, requestToken: requestToken, method: GET);
+  static Future<ResponseBodyApi> get(String url,
+      {data, requestToken = true}) async {
+    return await request(url,
+        data: data, requestToken: requestToken, method: GET);
   }
 
-  static Future<ResponseBodyApi> post(String url, {data, requestToken = true}) async {
+  static Future<ResponseBodyApi> post(String url,
+      {data, requestToken = true}) async {
     return await request(url, data: data, requestToken: requestToken);
   }
 
-  static Future<ResponseBodyApi> request(String url, {data, method, requestToken = true}) async {
+  static Future<ResponseBodyApi> request(String url,
+      {data, method, requestToken = true}) async {
     data = data ?? {};
     method = method ?? POST;
 
@@ -37,7 +41,8 @@ class HttpUtil {
       Response res = await dio.request(url, data: data);
       responseBodyApi = ResponseBodyApi.fromMap(res.data);
     } catch (e) {
-      responseBodyApi = ResponseBodyApi(success: false, message: '请求出错了：' + e.toString());
+      responseBodyApi =
+          ResponseBodyApi(success: false, message: '请求出错了：' + e.toString());
     }
 
     return responseBodyApi;
@@ -49,12 +54,17 @@ class HttpUtil {
       var apiProperties = cryProperties.apiProperties;
       BaseOptions options = new BaseOptions(
         baseUrl: apiProperties.baseUrl!,
-        connectTimeout: apiProperties.connectTimeout,
-        receiveTimeout: apiProperties.receiveTimeout,
+        connectTimeout: apiProperties.connectTimeout != null
+            ? Duration(seconds: apiProperties.connectTimeout!)
+            : null,
+        receiveTimeout: apiProperties.receiveTimeout != null
+            ? Duration(seconds: apiProperties.receiveTimeout!)
+            : null,
       );
 
       dio = new Dio(options);
-      List<Interceptor>? list = ApplicationContext.instance.getBean(CryConstant.KEY_DIO_INTERCEPTORS);
+      List<Interceptor>? list =
+          ApplicationContext.instance.getBean(CryConstant.KEY_DIO_INTERCEPTORS);
       if (list != null && list.isNotEmpty) {
         dio!.interceptors.addAll(list);
       }
